@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DO YOU KNOW BALL?!</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><script defer src="game.js"></script>
+</head>
+<body>
+<main class="shell">
+<header><a class="brand" href="./">DO YOU KNOW <span>BALL?!</span></a><p>TWO FACES. ONE NAME. HOW LONG CAN YOU GO?</p></header>
+<section id="menu" class="panel" aria-labelledby="menu-title">
+<h1 id="menu-title">PICK YOUR PLAYERS</h1>
+<fieldset class="filter-group"><legend>Gender</legend><div class="filter-grid gender-grid"><button type="button" class="filter" data-gender="all" aria-pressed="true">All</button><button type="button" class="filter" data-gender="men" aria-pressed="false">Men</button><button type="button" class="filter" data-gender="women" aria-pressed="false">Women</button></div></fieldset>
+<fieldset class="filter-group"><legend>League</legend><div class="filter-grid league-grid"><button type="button" class="filter all-leagues" data-league="all" aria-pressed="true">All leagues</button><button type="button" class="filter" data-league="Premier League" aria-pressed="false">Premier League</button><button type="button" class="filter" data-league="WSL" aria-pressed="false">WSL</button><button type="button" class="filter" data-league="La Liga" aria-pressed="false">La Liga</button><button type="button" class="filter" data-league="Bundesliga" aria-pressed="false">Bundesliga</button><button type="button" class="filter" data-league="Serie A" aria-pressed="false">Serie A</button><button type="button" class="filter" data-league="Ligue 1" aria-pressed="false">Ligue 1</button></div></fieldset>
+<p id="availability" class="muted" role="status">Loading player database…</p><button id="start" class="primary" disabled>LET'S GO</button>
+</section>
+<section id="play" hidden>
+<div class="scores"><div class="score current"><span>Current score</span><strong id="score">0</strong></div><div class="score"><span>Your best score</span><strong id="best">0</strong></div></div>
+<section class="panel round" aria-labelledby="question"><p class="eyebrow" id="round">Round 1</p><h1 id="question" tabindex="-1">Which one is <span id="target"></span>?</h1><p id="feedback" class="feedback" role="status" hidden></p><p id="loading" class="muted" role="status" hidden>Loading portraits…</p>
+<div class="portraits" id="portraits"><button class="portrait" id="choice0" type="button" aria-label="Portrait A" disabled><img alt="" draggable="false"></button><button class="portrait" id="choice1" type="button" aria-label="Portrait B" disabled><img alt="" draggable="false"></button></div>
+<p id="play-error" role="status" class="muted" hidden></p><button id="quit" class="text-button">Back to game modes</button></section></section>
+<section id="end" class="panel end" hidden aria-labelledby="end-title"><p id="end-kicker" class="eyebrow" hidden></p><h1 id="end-title" tabindex="-1">Ahh soz that's wrong!</h1><p id="end-message"></p><div class="end-portraits" id="end-portraits" hidden><figure><img id="wrong-photo" alt=""><figcaption id="wrong-name"></figcaption></figure><figure><img id="right-photo" alt=""><figcaption id="right-name"></figcaption></figure></div><div class="scores"><div class="score current"><span>Final score</span><strong id="final-score">0</strong></div><div class="score"><span>Your best score</span><strong id="final-best">0</strong></div></div><button id="again" class="primary">Play again</button><button id="back" class="secondary">Change game mode</button></section>
+<footer>DO YOU KNOW BALL?! <span>•</span> KNOW YOUR FOOTBALL.</footer>
+</main></body></html>
